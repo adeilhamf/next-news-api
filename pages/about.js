@@ -6,24 +6,24 @@ export const about = ({employee}) => {
   return (
 <div className="page-container">
 <Head>
-        <title>Employee Of The Month</title>
+        <title>About The Creator</title>
         <meta
           name="description"
-          content={`This month's employee of the month is ${employee.name}`}
+          content={`This News app made by ${employee.name}`}
         />
 
         <meta property="og:image" content={employee.image} />
-        <meta property="og:title" content="Employee Of The Month" />
+        <meta property="og:title" content="About Me" />
         <meta
           property="og:description"
-          content={`This month's employee of the month is ${employee.name}`}
+          content={`This news app made by ${employee.name}`}
         />
 
         <meta property="twitter:image" content={employee.image} />
-        <meta property="twitter:title" content="Employee Of The Month" />
+        <meta property="twitter:title" content="About me" />
         <meta
           property="twitter:description"
-          content={`This month's employee of the month is ${employee.name}`}
+          content={`Little things about me ${employee.name}`}
         />
       </Head>
 
