@@ -16,8 +16,8 @@ export const about = ({employee}) => {
 }
 
 export const getServerSideProps = async pageContact =>{
-    const apiResponse = await fetch('https://my-json-server.typicode.com/portexe/next-news/employeeOfTheMonth')
-
+    const apiResponse = await fetch('https://my-json-server.typicode.com/adeilhamf/next-news-api/employeeOfTheMonth')
+    
     const employee = await apiResponse.json()
 
     return {
