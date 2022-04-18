@@ -19,7 +19,7 @@ const Feed = ({pageNumber, articles}) => {
     <div className={styles.main}>
         <div className={styles.post}>
             {articles.map((articles,index)=>(
-            <div className={styles.card}>
+            <div key={index} className={styles.card}>
                 {!!articles.urlToImage && <img src={articles.urlToImage} />} 
                 <div className={styles.container}>
             <h1 onClick={() => (window.location.href = articles.url)}>{articles.title}</h1>
