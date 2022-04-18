@@ -16,7 +16,7 @@ const Feed = ({pageNumber, articles}) => {
     <div className='page-container'>
         <Toolbar />
 
-    <div class={styles.main}>
+    <div className={styles.main}>
         <div className={styles.post}>
             {articles.map((articles,index)=>(
             <div className={styles.card}>
