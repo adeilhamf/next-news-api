@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from '../../styles/Feed.module.css'
 import { useRouter } from 'next/router'
+import { Toolbar } from '../../components/toolbar'
 const Feed = ({pageNumber, articles}) => {
    const router = useRouter() 
   return (
     <div className='page-container'>
+        <Toolbar />
         <div className={styles.main}>
         {articles.map((articles,index)=>(
             <div key={index} className={styles.post}>
@@ -23,6 +25,16 @@ const Feed = ({pageNumber, articles}) => {
         }}
         className={pageNumber === 1 ? styles.disable : styles.active}>
             prev page
+        </div>
+        <div>#{pageNumber}</div>
+        <div 
+        onClick={()=>{
+            if (pageNumber < 5){
+                router.push(`/feed/${pageNumber + 1}`)
+            }
+        }}
+        className={pageNumber === 5 ? styles.disable : styles.active}>
+            Next page
         </div>
     </div>
     </div>
